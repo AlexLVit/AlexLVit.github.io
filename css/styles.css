@@ -1,0 +1,341 @@
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: no-repeat radial-gradient(#1f3756, #141539);
+  width: 100%;
+  height: 112vw;
+}
+
+.paper {
+  margin: 20px 40px;
+  min-width: 150px;
+  min-height: 120px;
+  max-width: 180px;
+  max-height: 150px;
+  border: solid 1rem transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(white, white), linear-gradient(#4865f4, #5671f5);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0px 5px 1px 1px #3554f3, inset 3px 6px 4px #b6b686;
+}
+.paper .paper-icon {
+  position: relative;
+  top: 25%;
+  left: 30%;
+  width: 60px;
+  height: 70px;
+}
+
+.scissors {
+  margin: 20px 40px;
+  min-width: 150px;
+  min-height: 120px;
+  max-width: 180px;
+  max-height: 150px;
+  border: solid 1rem transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(white, white), linear-gradient(#ec9e0e, #eca922);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0px 5px 1px 1px #eca922, inset 3px 6px 4px #b6b686;
+}
+.scissors .scissors-icon {
+  position: relative;
+  top: 25%;
+  left: 30%;
+  width: 60px;
+  height: 70px;
+}
+
+.rock {
+  margin: 20px 40px;
+  min-width: 150px;
+  min-height: 120px;
+  max-width: 180px;
+  max-height: 150px;
+  border: solid 1rem transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(white, white), linear-gradient(#dc2e4e, #dd405d);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0px 5px 1px 1px #dd405d, inset 3px 6px 4px #b6b686;
+}
+.rock .rock-icon {
+  position: relative;
+  top: 25%;
+  left: 30%;
+  width: 60px;
+  height: 70px;
+}
+
+#score {
+  font-size: 1.2em;
+}
+
+.items-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 100px auto 0;
+  max-width: 600px;
+  max-height: 400px;
+}
+
+.square {
+  display: flex;
+  margin: 25px auto;
+  padding: 15px 25px;
+  justify-content: space-between;
+  width: 650px;
+  border: 1.8px solid #606e85;
+  border-radius: 8px;
+}
+
+.score-container {
+  width: 120px;
+  height: 100px;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+}
+.score-container h3 {
+  color: #2a46c0;
+}
+
+.rules-button {
+  width: 115px;
+  height: 40px;
+  margin-left: 80%;
+  background-color: transparent;
+  border: solid 0.8px #606e85;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.rules {
+  position: absolute;
+  top: 12%;
+  right: 40%;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  padding: 50px 30px 70px;
+  display: none;
+}
+.rules .description {
+  margin: -20px;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.rules img {
+  position: relative;
+  top: 50px;
+}
+
+.extend {
+  max-width: 1100px;
+  min-height: 500px;
+}
+
+#cross {
+  position: absolute;
+  top: 2%;
+  left: 85%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.chosen {
+  margin: 0 120px;
+}
+
+.players {
+  display: none;
+  color: white;
+  font-size: 1.4em;
+  padding: 0 130px;
+  max-width: 160px;
+  max-height: 50px;
+}
+
+.players-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+#win-result,
+#lose-result {
+  display: none;
+  font-size: 1.6em;
+  color: white;
+}
+
+#try-again {
+  display: none;
+  height: 30px;
+  width: 100px;
+  color: red;
+  background-color: white;
+  border: solid 0.5px;
+  border-radius: 8px;
+}
+
+.attribution {
+  margin-top: 50px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    width: 100%;
+    height: 210vw;
+    margin: 0;
+  }
+
+  .square {
+    width: 70%;
+    margin: 15px auto;
+    align-items: center;
+  }
+  .square img {
+    width: 25%;
+    height: 20%;
+  }
+  .square .score-container {
+    width: 25%;
+    height: 20%;
+    padding: 0;
+  }
+  .square .score-container h3 {
+    margin: 5px;
+    text-transform: uppercase;
+  }
+  .square .score-container #score {
+    margin: 0 0 5px;
+    font-size: 1.6em;
+  }
+
+  .items-container {
+    margin: 50px 0 0 0;
+    height: 30%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .items-container .paper,
+.items-container .scissors,
+.items-container .rock {
+    margin: 10px 34px;
+    min-width: 20%;
+    min-height: 24%;
+  }
+  .items-container .paper .paper-icon,
+.items-container .paper .scissors-icon,
+.items-container .paper .rock-icon,
+.items-container .scissors .paper-icon,
+.items-container .scissors .scissors-icon,
+.items-container .scissors .rock-icon,
+.items-container .rock .paper-icon,
+.items-container .rock .scissors-icon,
+.items-container .rock .rock-icon {
+    width: 40%;
+    height: 55%;
+  }
+
+  .rules-button {
+    width: 20%;
+    height: 3%;
+    margin: 50px 40%;
+  }
+
+  .extend {
+    max-height: 280px !important;
+    min-height: 280px !important;
+    width: 100%;
+  }
+
+  .players {
+    display: none;
+    color: white;
+    font-size: 0.9em;
+    padding: 0 75px;
+    max-width: 100px;
+    max-height: 50px;
+  }
+
+  .players-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+
+  #win-result,
+#lose-result {
+    display: none;
+    font-size: 1.3em;
+    color: white;
+  }
+
+  #try-again {
+    display: none;
+    font-size: 0.7em;
+    height: 30px;
+    width: 70px;
+    color: red;
+    background-color: white;
+    border: solid 0.5px;
+    border-radius: 8px;
+  }
+
+  .rules {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50px 30px 70px;
+    display: none;
+  }
+  .rules .description {
+    margin: 0 32%;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  .rules img {
+    position: relative;
+    top: 50px;
+    left: 8%;
+    right: 25%;
+  }
+
+  .chosen {
+    min-width: 50px !important;
+    min-height: 50px !important;
+    max-width: 60px !important;
+    max-height: 65px !important;
+  }
+
+  #cross {
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

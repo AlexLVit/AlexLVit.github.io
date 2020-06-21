@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+
+<body>
+  <header>
+    <div class="square">
+      <img src="./images/logo.svg" alt="">
+      <div class="score-container"><h3>Score</h3><p id="score">0</p></div>
+    </div>
+  </header>
+ 
+  <div class="items-container">
+    <div class="players-text"><p class="players">You Picked</p>
+      <p class="players"> The House Picked</p></div>
+    
+    <div class="paper" onclick="choseItem(this)">
+      <img class="paper-icon" src="./images/icon-paper.svg" alt="">
+    </div>
+    <div class="scissors" onclick="choseItem(this)">
+      <img src="./images/icon-scissors.svg" alt="" class="scissors-icon">
+    </div>
+    <div class="rock" onclick="choseItem(this)">
+      <img src="./images/icon-rock.svg" alt="" class="rock-icon">
+    </div>
+    
+    <div class="rules" >
+      
+      <p class="description">Rules</p>
+      <p id="cross">&#10005;</p> 
+      <img src="./images/image-rules.svg" alt="">
+    </div>
+    <div class="results-container">
+      <p id="win-result">You Win</p>
+    <p id="lose-result">You Lose</p>
+    <button id="try-again" onclick="tryAgain()"> Play Again</button>
+    </div>
+  </div>
+  <button class="rules-button">Rules</button>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Alexander</a>.
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
