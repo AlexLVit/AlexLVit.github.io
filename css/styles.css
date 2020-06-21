@@ -123,6 +123,7 @@ body {
   height: 300px;
   padding: 50px 30px 70px;
   display: none;
+  z-index: 1;
 }
 .rules .description {
   margin: -20px;
