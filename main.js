@@ -42,15 +42,17 @@ function choseItem(item) {
         document.getElementsByClassName("players")[1].style.display = "block";
         child = parent.lastElementChild;
         let chosenPaper = document.querySelector(".paper.chosen");
-
         let chosenScissors = document.querySelector(".scissors.chosen");
         let chosenRock = document.querySelector(".rock.chosen")
         if (chosen == chosenPaper && child == chosenRock || chosen == chosenScissors && child == chosenPaper || chosen == chosenRock && child == chosenScissors) {
             ++score;
             document.getElementById("win-result").style.display = "block"
             document.getElementById("try-again").style.display = "block"
-        } else {
-            score += 0;
+        }else if(chosen.classList.contains("paper")&&child.classList.contains("paper")||chosen.classList.contains("scissors")&&child.classList.contains("scissors")||chosen.classList.contains("rock")&&child.classList.contains("rock")){
+            document.getElementById("draw-result").style.display = "block"
+            document.getElementById("try-again").style.display = "block"
+        }
+         else {
             document.getElementById("lose-result").style.display = "block"
             document.getElementById("try-again").style.display = "block"
         }
@@ -65,6 +67,7 @@ function tryAgain() {
     });
     child.style.display = "none";
     document.getElementById("win-result").style.display = "none"
+    document.getElementById("draw-result").style.display = "none"
     document.getElementById("lose-result").style.display = "none"
     document.getElementById("try-again").style.display = "none"
     document.getElementsByClassName("players")[0].style.display = "none";
